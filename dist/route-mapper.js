@@ -22,8 +22,8 @@ var RouteMapper = (function (_super) {
                 handler: { name: name },
                 caseSensitive: config.caseSensitive === true
             });
-            if (config.settings.childConfig) {
-                _this.map(config.settings.childConfig, name, path);
+            if (config.settings && config.settings.childRoutes) {
+                _this.map(config.settings.childRoutes, name, path);
             }
         });
     };

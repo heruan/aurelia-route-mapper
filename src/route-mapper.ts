@@ -12,8 +12,8 @@ export class RouteMapper extends RouteRecognizer {
                 handler: { name: name },
                 caseSensitive: config.caseSensitive === true
             });
-            if (config.settings.childConfig) {
-                this.map(config.settings.childConfig, name, path);
+            if (config.settings && config.settings.childRoutes) {
+                this.map(config.settings.childRoutes, name, path);
             }
         });
     }
